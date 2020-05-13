@@ -28,4 +28,14 @@ public class CDServiceImpl implements CDService {
 
         return responseList;
     }
+
+    @Override
+    public Album findByName(String name) {
+        Album album = new Album();
+        album.setName(name);
+        album.setDescription("This is an awesome album!");
+        album.setArtist("GOD");
+
+        return album;
+    }
 }

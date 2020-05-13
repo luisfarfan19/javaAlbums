@@ -22,13 +22,14 @@ public interface CDResource {
     @GetMapping(value = "/search/all",  produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     ResponseEntity<List<Album>> getAllCd();
 
-    /*
     @ApiResponses(value = {
             @ApiResponse(code = 200, message = "Ok", response = Boolean.class),
+            @ApiResponse(code = 400, message = "Bad Request"),
+            @ApiResponse(code = 404, message = "Not Found"),
             @ApiResponse(code = 500, message = "Internal Server Error")
     })
     @ApiOperation(value="Get Album information")
-    @RequestMapping(value = "/search/",  produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
-    ResponseEntity<List<Album>> getAllCd();
-     */
+    @GetMapping(value = "/search/{name}",  produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    ResponseEntity <Album> getAlbumByName(@PathVariable String name);
+
 }

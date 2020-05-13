@@ -6,4 +6,6 @@ import java.util.List;
 
 public interface CDService {
     List<Album> findAllCd();
+
+    Album findByName(String name);
 }

@@ -28,4 +28,13 @@ public class CDController implements CDResource {
 
         return new ResponseEntity<>(responseList, HttpStatus.OK);
     }
+
+    @Override
+    public ResponseEntity<Album> getAlbumByName(String name) {
+        LOGGER.info("Searching for Album: {}", name);
+
+        Album response = cdService.findByName(name);
+
+        return new ResponseEntity<>(response, HttpStatus.OK);
+    }
 }
