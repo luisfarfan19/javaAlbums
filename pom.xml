@@ -15,7 +15,6 @@
     <description>Simple Music Project with Spring Boot</description>
 
 
-
     <properties>
         <java.version>1.8</java.version>
     </properties>
@@ -46,6 +45,14 @@
             <artifactId>swagger-annotations</artifactId>
             <version>1.5.13</version>
         </dependency>
+
+        <!-- Dependencies added for Mongo integration -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-mongodb</artifactId>
+        </dependency>
+        <!-- END Dependencies added for Mongo integration -->
+
     </dependencies>
 
     <build>

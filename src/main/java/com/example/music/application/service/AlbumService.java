@@ -4,7 +4,7 @@ import com.example.music.domain.model.Album;
 
 import java.util.List;
 
-public interface CDService {
+public interface AlbumService {
     List<Album> findAllCd();
 
     Album findByName(String name);
